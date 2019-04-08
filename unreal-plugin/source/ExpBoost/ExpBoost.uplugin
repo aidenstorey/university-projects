@@ -1,0 +1,21 @@
+{
+	"FileVersion":3,
+	"FriendlyName":"ExpBoost",
+	"Version":1,
+	"VersionName":"1.0.0",
+	"CreateBy":"Aiden Storey",
+	"EngineVersion":"4.7.0",
+	"Description":"Provides experience, level, and stat systems to enhance any character, playing or not.",
+	"Category":"ASPlugins.ExpBoost",
+	"EnabledByDefault":true,
+	
+	"Modules":
+	[
+		{
+			"Name":"ExpBoost",
+			"Type":"Editor",
+			"Type":"Runtime",
+			"LoadingPhase":"PreDefault"
+		}
+	]
+}

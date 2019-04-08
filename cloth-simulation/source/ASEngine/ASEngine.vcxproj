@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{97569976-8107-4376-97EC-698560C0DEDF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ASEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;$(SolutionDir)$(ProjectName)\xmllib\include;C:\Program Files %28x86%29\Visual Leak Detector\include;$(SolutionDir)$(ProjectName)\Engine</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86;$(SolutionDir)$(ProjectName)\xmllib\lib;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;$(SolutionDir)$(ProjectName)\xmllib\include;C:\Program Files %28x86%29\Visual Leak Detector\include;$(SolutionDir)$(ProjectName)\Engine</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86;$(SolutionDir)$(ProjectName)\xmllib\lib;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d10.lib;d3dx10.lib;winmm.lib;xmllibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d10.lib;d3dx10.lib;winmm.lib;xmllib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cloth_particle.cpp" />
+    <ClCompile Include="cloth_simulation.cpp" />
+    <ClCompile Include="collider.cpp" />
+    <ClCompile Include="Engine\button.cpp" />
+    <ClCompile Include="Engine\button_circle.cpp" />
+    <ClCompile Include="Engine\button_rectangle.cpp" />
+    <ClCompile Include="Engine\camera.cpp" />
+    <ClCompile Include="Engine\drawable.cpp" />
+    <ClCompile Include="Engine\engine.cpp" />
+    <ClCompile Include="Engine\input_manager.cpp" />
+    <ClCompile Include="Engine\math_functions.cpp" />
+    <ClCompile Include="Engine\mesh.cpp" />
+    <ClCompile Include="Engine\object_2d.cpp" />
+    <ClCompile Include="Engine\object_2d_manager.cpp" />
+    <ClCompile Include="Engine\object_3d.cpp" />
+    <ClCompile Include="Engine\object_3d_manager.cpp" />
+    <ClCompile Include="Engine\scene.cpp" />
+    <ClCompile Include="Engine\scene_manager.cpp" />
+    <ClCompile Include="Engine\scene_sample.cpp" />
+    <ClCompile Include="Engine\shader.cpp" />
+    <ClCompile Include="Engine\shader_default_2d.cpp" />
+    <ClCompile Include="Engine\shader_default_3d.cpp" />
+    <ClCompile Include="Engine\shader_manager.cpp" />
+    <ClCompile Include="Engine\shader_textured_2d.cpp" />
+    <ClCompile Include="Engine\shader_textured_3d.cpp" />
+    <ClCompile Include="Engine\shape_renderer.cpp" />
+    <ClCompile Include="Engine\text.cpp" />
+    <ClCompile Include="Engine\texture.cpp" />
+    <ClCompile Include="Engine\textured_2d.cpp" />
+    <ClCompile Include="Engine\texture_manager.cpp" />
+    <ClCompile Include="Engine\text_manager.cpp" />
+    <ClCompile Include="Engine\timer.cpp" />
+    <ClCompile Include="Engine\viewport.cpp" />
+    <ClCompile Include="program_entry.cpp" />
+    <ClCompile Include="scene_physics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cloth_link.h" />
+    <ClInclude Include="cloth_particle.h" />
+    <ClInclude Include="cloth_simulation.h" />
+    <ClInclude Include="collider.h" />
+    <ClInclude Include="Engine\button.h" />
+    <ClInclude Include="Engine\button_circle.h" />
+    <ClInclude Include="Engine\button_rectangle.h" />
+    <ClInclude Include="Engine\camera.h" />
+    <ClInclude Include="Engine\drawable.h" />
+    <ClInclude Include="Engine\engine.h" />
+    <ClInclude Include="Engine\input_manager.h" />
+    <ClInclude Include="Engine\math_functions.h" />
+    <ClInclude Include="Engine\mesh.h" />
+    <ClInclude Include="Engine\object_2d.h" />
+    <ClInclude Include="Engine\object_2d_manager.h" />
+    <ClInclude Include="Engine\object_3d.h" />
+    <ClInclude Include="Engine\object_3d_manager.h" />
+    <ClInclude Include="Engine\safe_release.h" />
+    <ClInclude Include="Engine\scene.h" />
+    <ClInclude Include="Engine\scene_main_menu.h" />
+    <ClInclude Include="Engine\scene_manager.h" />
+    <ClInclude Include="Engine\scene_manager.hpp" />
+    <ClInclude Include="Engine\scene_sample.h" />
+    <ClInclude Include="Engine\shader.h" />
+    <ClInclude Include="Engine\shader_default_2d.h" />
+    <ClInclude Include="Engine\shader_default_3d.h" />
+    <ClInclude Include="Engine\shader_id_list.h" />
+    <ClInclude Include="Engine\shader_manager.h" />
+    <ClInclude Include="Engine\shader_manager.hpp" />
+    <ClInclude Include="Engine\shader_textured_2d.h" />
+    <ClInclude Include="Engine\shader_textured_3d.h" />
+    <ClInclude Include="Engine\shape_renderer.h" />
+    <ClInclude Include="Engine\text.h" />
+    <ClInclude Include="Engine\texture.h" />
+    <ClInclude Include="Engine\textured_2d.h" />
+    <ClInclude Include="Engine\texture_manager.h" />
+    <ClInclude Include="Engine\text_manager.h" />
+    <ClInclude Include="Engine\timer.h" />
+    <ClInclude Include="Engine\vertex.h" />
+    <ClInclude Include="Engine\viewport.h" />
+    <ClInclude Include="program_entry.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scene_id_list.h" />
+    <ClInclude Include="scene_physics.h" />
+    <ClInclude Include="self_intersection_grid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ASEngine.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
